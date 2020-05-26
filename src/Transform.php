@@ -51,13 +51,18 @@ class Transform
     // Special case - Just return raw file with no other transformations
     public function raw($args = []): array
     {
-        return ['resource_type' => 'raw'];
+        return [];
     }
 
     // Common recipes
     public function thumbnail($args = []): array
     {
         return ['height' => 120, 'width' => 'auto', 'fetch_format' => 'jpg'];
+    }
+
+    public function hero()
+    {
+        return ['width' => 800, 'fetch_format' => 'jpg'];
     }
 
     public function responsive($args = []): array
