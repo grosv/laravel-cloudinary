@@ -62,7 +62,7 @@ class Transform
 
     public function hero()
     {
-        return ['width' => 800];
+        return ['width' => 800, 'fetch_format' => 'jpg'];
     }
 
     public function responsive($args = []): array
