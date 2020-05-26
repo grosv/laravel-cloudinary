@@ -65,6 +65,11 @@ class Transform
         return ['width' => 800, 'fetch_format' => 'jpg'];
     }
 
+    public function hero_raw()
+    {
+        return ['width' => 800];
+    }
+
     public function responsive($args = []): array
     {
         return ['dpr' => 'auto', 'responsive' => true, 'width' => 'auto', 'crop' => 'scale'];
