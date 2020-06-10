@@ -39,7 +39,7 @@ class Upload
 
     public function upload()
     {
-        return $this->client::upload($this->file, $this->uploadPreset, $this->options);
+        return $this->client::unsigned_upload($this->file, $this->uploadPreset, $this->options);
         /**
         return $this->isLargeFile() ?
             $this->client::upload_large($this->file, $this->options) :
