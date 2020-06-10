@@ -77,7 +77,7 @@ class Transform
 
     public function cropToFaces($args = []): array
     {
-        return ['width' => $args['width'] ?? 500, 'height' => $args['height'] ?? 500, 'gravity' => 'faces', 'crop' => 'fill'];
+        return ['width' => $args['width'] ?? 250, 'height' => $args['height'] ?? 250, 'gravity' => 'faces', 'crop' => 'fill'];
     }
 
 }

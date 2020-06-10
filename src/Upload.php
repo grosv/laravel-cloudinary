@@ -11,6 +11,7 @@ class Upload
     private $client;
     public $file;
     public $options;
+    public $uploadPreset;
 
     public function __construct(Uploader $cloudinary)
     {
@@ -30,9 +31,15 @@ class Upload
         return $this;
     }
 
+    public function setPreset($preset)
+    {
+        $this->uploadPreset = $preset;
+        return $this;
+    }
+
     public function upload()
     {
-        return $this->client::upload($this->file, $this->options);
+        return $this->client::upload($this->file, $this->uploadPreset, $this->options);
         /**
         return $this->isLargeFile() ?
             $this->client::upload_large($this->file, $this->options) :
