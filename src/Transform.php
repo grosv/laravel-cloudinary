@@ -60,12 +60,17 @@ class Transform
         return ['height' => 120, 'width' => 'auto', 'fetch_format' => 'jpg'];
     }
 
-    public function hero()
+    public function square($args = []): array
+    {
+        return ['width' => 800, 'height' => '800', 'crop' => 'fill', 'gravity' => 'face:center'];
+    }
+
+    public function hero($args = [])
     {
         return ['width' => 800, 'fetch_format' => 'jpg'];
     }
 
-    public function hero_raw()
+    public function hero_raw($args = [])
     {
         return ['width' => 800];
     }

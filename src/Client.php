@@ -8,12 +8,11 @@ use Cloudinary\Uploader;
 
 class Client
 {
-    public function upload(string $file, array $options = [], $preset = 'ml_default')
+    public function upload(string $file, array $options = [])
     {
         return (new Upload(new Uploader()))
             ->setFile($file)
             ->setOptions($options)
-            ->setPreset($preset)
             ->upload();
     }
 
