@@ -57,32 +57,32 @@ class Transform
     // Common recipes
     public function thumbnail($args = []): array
     {
-        return ['height' => 120, 'width' => 'auto', 'fetch_format' => 'jpg'];
+        return ['height' => 120, 'width' => 'auto', 'type' => 'fetch', 'fetch_format' => 'jpg'];
     }
 
     public function square($args = []): array
     {
-        return ['width' => 800, 'height' => '800', 'crop' => 'fill', 'gravity' => 'face:center'];
+        return ['width' => 800, 'height' => '800', 'type' => 'fetch', 'crop' => 'fill', 'gravity' => 'face:center'];
     }
 
     public function hero($args = [])
     {
-        return ['width' => 800, 'fetch_format' => 'jpg'];
+        return ['width' => 800, 'type' => 'fetch', 'fetch_format' => 'jpg'];
     }
 
     public function hero_raw($args = [])
     {
-        return ['width' => 800];
+        return ['width' => 800, 'type' => 'fetch'];
     }
 
     public function responsive($args = []): array
     {
-        return ['dpr' => 'auto', 'responsive' => true, 'width' => 'auto', 'crop' => 'scale'];
+        return ['dpr' => 'auto', 'responsive' => true, 'width' => 'auto', 'type' => 'fetch', 'crop' => 'scale'];
     }
 
     public function cropToFaces($args = []): array
     {
-        return ['width' => $args['width'] ?? 250, 'height' => $args['height'] ?? 250, 'gravity' => 'faces', 'crop' => 'fill'];
+        return ['width' => $args['width'] ?? 250, 'height' => $args['height'] ?? 250, 'gravity' => 'faces', 'type' => 'fetch', 'crop' => 'fill'];
     }
 
 }
